@@ -82,6 +82,7 @@ class SerialPortsOperations(object):
         accept = "application/json"
         accept_language = "en"
         content_type = "application/json"
+        guid = str(uuid.uuid4())
 
         # Construct URL
         url = self.connect.metadata['url']  # type: ignore
@@ -104,6 +105,7 @@ class SerialPortsOperations(object):
         header_parameters['Accept'] = self._serialize.header("accept", accept, 'str')
         header_parameters['Accept-Language'] = self._serialize.header("accept-language", accept_language, 'str')
         header_parameters['Content-Type'] = self._serialize.header("content-type", content_type, 'str')
+        header_parameters['x-ms-correlation-request-id'] = self._serialize.header("x-ms-correlation-request-id", guid, 'str')
 
         request = self._client.post(url, query_parameters, header_parameters)
         pipeline_response = self._client._pipeline.run(request, stream=False, **kwargs)
