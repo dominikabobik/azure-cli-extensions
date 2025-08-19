@@ -222,7 +222,7 @@ class SerialconsoleAdminCommandsTest(LiveScenarioTest):
         websocket_url = json_results["connectionString"]
 
         ws = websocket.WebSocket()
-        ws.connect(websocket_url + "?authorization=" + access_token, timeout=30)
+        ws.connect(websocket_url, timeout=30)
         buffer = ""
         while True:
             try:

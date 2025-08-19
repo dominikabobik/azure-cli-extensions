@@ -14,8 +14,6 @@ class ArmEndpoints:  # pylint: disable=too-few-public-methods
                               'centralindia': 'southindia',
                               'centralus': 'westcentralus',
                               'centraluseuap': 'eastus2euap',
-                              'chinaeast3': 'chinanorth3',
-                              'chinanorth3': 'chinaeast3',
                               'eastasia': 'southeastasia',
                               'eastus2': 'westus2',
                               'eastus2euap': 'centraluseuap',
@@ -30,8 +28,8 @@ class ArmEndpoints:  # pylint: disable=too-few-public-methods
                               'northeurope': 'westeurope',
                               'norwayeast': 'norwaywest',
                               'norwaywest': 'norwayeast',
-                              'southafricanorth': 'southafricawest'
-                              'southafricawest': 'southafricanorth'
+                              'southafricanorth': 'southafricawest',
+                              'southafricawest': 'southafricanorth',
                               'southeastasia': 'eastasia',
                               'southindia': 'centralindia',
                               'swedencentral': 'swedensouth',
@@ -45,6 +43,4 @@ class ArmEndpoints:  # pylint: disable=too-few-public-methods
                               'westcentralus': 'centralus',
                               'westeurope': 'northeurope',
                               'westus2': 'eastus2',
-                              'usgovarizona': 'usgoveast',  # usgoveast == usgovvirginia
-                              'usgovvirginia': 'usgovsw',  # usgovsw == usgovarizona
                               }
