@@ -45,13 +45,7 @@ class MicrosoftSerialConsoleClient(MicrosoftSerialConsoleClientOperationsMixin):
         # type: (...) -> None
         
         if len(kwargs) > 0 and kwargs.get('storage_account_region') is not None:
-            storage_region = kwargs['storage_account_region']
-            if "usgov" in storage_region:
-                base_url = 'https://{}.management.usgovcloudapi.net'.format(storage_region)
-            else if "china" in storage_region:
-                base_url = 'https://{}.management.chinacloudapi.cn'.format(storage_region)
-            else:
-                base_url = 'https://direct-{}.management.azure.com'.format(storage_region)
+            base_url = 'https://direct-{}.management.azure.com'.format(kwargs['storage_account_region'])
 
         if not base_url:
             base_url = 'https://management.azure.com'
